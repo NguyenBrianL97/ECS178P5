@@ -1,0 +1,39 @@
+
+# # is a comment, just like // in C++
+# usemtl and mtllib describe the look of the model. We won’t use this in this tutorial.
+# v is a vertex
+# vt is the texture coordinate of one vertex
+# vn is the normal of one vertex
+# f is a face
+# v, vt and vn are simple to understand. f is more tricky. So, for f 8/11/7 7/12/7 6/10/7 :
+# 8/11/7 describes the first vertex of the triangle
+# 7/12/7 describes the second vertex of the triangle
+# 6/10/7 describes the third vertex of the triangle (duh)
+# For the first vertex, 8 says which vertex to use. So in this case, -1.000000 1.000000 -1.000000 (index start to 1, not to 0
+# like in C++)
+# 11 says which texture coordinate to use. So in this case, 0.748355 0.998230
+# 7 says which normal to use. So in this case, 0.000000 1.000000 -0.000000
+
+v 1.000000 -10.000000 -1.000000
+v 1.000000 -10.000000 1.000000
+v -1.000000 -10.000000 1.000000
+v -1.000000 -10.000000 -1.000000
+v 1.000000 10.000000 -0.999999
+v 0.999999 10.000000 1.000001
+v -1.000000 10.000000 1.000000
+v -1.000000 10.000000 -1.000000
+
+vn 0.0000 -1.0000 0.0000
+vn 0.0000 1.0000 0.0000
+vn 1.0000 -0.0000 0.0000
+vn 0.0000 -0.0000 1.0000
+vn -1.0000 -0.0000 -0.0000
+vn 0.0000 0.0000 -1.0000
+
+
+f 2//1 3//1 4//1 1//1
+f 8//2 7//2 6//2 5//2
+f 5//3 1//3 2//3 6//3
+f 6//3 2//3 3//3 7//3
+f 3//3 4//3 8//3 7//3
+f 1//3 5//3 8//3 4//3
